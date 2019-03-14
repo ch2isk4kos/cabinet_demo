@@ -118,3 +118,19 @@ Running via Spring preloader in process 2865
       create      app/assets/stylesheets/docs.scss
 
 #9
+added:
+views/docs/new.html.haml
+views/docs/_form.html.haml
+__
+
+#10
+$ rails generate simple_form:install
+Running via Spring preloader in process 3325
+SimpleForm 3 supports Bootstrap and Zurb Foundation 5. If you want a configuration that is compatible with one of these frameworks, then please re-run this generator with --bootstrap or --foundation as an option.
+      create  config/initializers/simple_form.rb
+       exist  config/locales
+      create  config/locales/simple_form.en.yml
+      create  lib/templates/erb/scaffold/_form.html.erb
+__
+
+#11
