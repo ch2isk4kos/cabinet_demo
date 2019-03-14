@@ -25,6 +25,14 @@ Things you may want to cover:
 
 # Play-by-Play
 
+#0 Install Ruby Gems
+* haml
+* device
+* simple_form
+
+add the versions to the Gemfile then run:
+$ bundle Install
+
 #1
 $ rails new cabinet
 create  
@@ -54,6 +62,8 @@ create  app/controllers/welcome_controller.rb
      create      app/assets/javascripts/welcome.coffee
      invoke    scss
      create      app/assets/stylesheets/welcome.scss
+
+*Change .html.erb files to .html.haml*
 
 #3
 $ rails s
@@ -91,3 +101,20 @@ use the default values. Use `rails generate simple_form:install` to generate the
 == 20190314224325 CreateDocs: migrated (0.0008s) ==============================
 
 #8
+$ rails generate controller Docs
+Running via Spring preloader in process 2865
+      create  app/controllers/docs_controller.rb
+      invoke  erb
+      create    app/views/docs
+      invoke  test_unit
+      create    test/controllers/docs_controller_test.rb
+      invoke  helper
+      create    app/helpers/docs_helper.rb
+      invoke    test_unit
+      invoke  assets
+      invoke    coffee
+      create      app/assets/javascripts/docs.coffee
+      invoke    scss
+      create      app/assets/stylesheets/docs.scss
+
+#9
