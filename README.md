@@ -228,3 +228,19 @@ Running via Spring preloader in process 2590
 -- add_index(:users, :reset_password_token, {:unique=>true})
    -> 0.0008s
 == 20190315203232 DeviseCreateUsers: migrated (0.0030s) =======================
+
+#13. Add Foreign Key Migration to Docs 
+
+1. $ rails generate migration add_user_id_to_docs user_id:integer
+Running via Spring preloader in process 2763
+      invoke  active_record
+      create    db/migrate/20190315204548_add_user_id_to_docs.rb
+
+2. $ rake db:migrate
+== 20190315204548 AddUserIdToDocs: migrating ==================================
+-- add_column(:docs, :user_id, :integer)
+   -> 0.0011s
+== 20190315204548 AddUserIdToDocs: migrated (0.0014s) =========================
+
+
+#14.

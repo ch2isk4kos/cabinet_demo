@@ -12,11 +12,13 @@ class DocsController < ApplicationController
     end
 
     def new
-        @doc = Doc.new
+        # @doc = Doc.new #before devise
+        @doc = current_user.docs.build # after devise
     end
 
     def create
-        @doc = Doc.new(doc_params)
+        # @doc = Doc.new(doc_params)
+        @doc = current_user.docs.build(doc_params) # after devise
 
         if @doc.save
             redirect_to @doc
