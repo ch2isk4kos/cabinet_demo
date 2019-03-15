@@ -7,6 +7,8 @@ class DocsController < ApplicationController
     end
 
     def show
+        #before action takes care of this action
+        #find_doc
     end
 
     def new
@@ -24,15 +26,21 @@ class DocsController < ApplicationController
     end
 
     def edit
-
+        #before action takes care of this action
+        #find_doc
     end
 
     def update
-
+        if @doc.update(doc_params)
+            redirect_to @doc
+        else
+            render 'edit'
+        end
     end
 
     def destroy
-
+        @doc.destroy
+        redirect_to docs_path
     end
 
     private
